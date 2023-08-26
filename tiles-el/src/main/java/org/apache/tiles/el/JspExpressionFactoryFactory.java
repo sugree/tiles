@@ -21,12 +21,13 @@
 
 package org.apache.tiles.el;
 
-import javax.el.ExpressionFactory;
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspFactory;
+import jakarta.el.ExpressionFactory;
+import jakarta.servlet.ServletContext;
 
 import org.apache.tiles.request.ApplicationContext;
 import org.apache.tiles.request.ApplicationContextAware;
+
+import jakarta.servlet.jsp.JspFactory;
 
 /**
  * Uses the JSP 2.1 {@link ExpressionFactory} to be used in Tiles.

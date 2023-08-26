@@ -70,6 +70,27 @@
         </configuration>
       </plugin>
       <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>jakarta-generated-classes</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+                <replace token="import javax." value="import jakarta." dir="target/autotag-classes">
+                        <include name="**/*.java"/>
+                </replace>
+              </target>
+            </configuration>
+            <goals>
+              <goal>
+                run
+              </goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.tiles.autotag.plugin</groupId>
         <artifactId>maven-autotag-plugin</artifactId>
         <version>${tiles.autotag.version}</version>
@@ -143,13 +164,13 @@
     </dependency>
 
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
+      <groupId>jakarta.servlet.jsp</groupId>
+      <artifactId>jakarta.servlet.jsp-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>

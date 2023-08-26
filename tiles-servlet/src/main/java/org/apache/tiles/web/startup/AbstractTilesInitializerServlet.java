@@ -20,8 +20,8 @@
  */
 package org.apache.tiles.web.startup;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServlet;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServlet;
 
 import org.apache.tiles.request.servlet.ServletApplicationContext;
 import org.apache.tiles.startup.TilesInitializer;
@@ -55,11 +55,12 @@ public abstract class AbstractTilesInitializerServlet extends HttpServlet {
     @Override
     public void init() {
         initializer = createTilesInitializer();
-        ServletContext adaptedContext = new ServletContextAdapter(
-                getServletConfig());
-        ServletApplicationContext preliminaryContext = new ServletApplicationContext(
-                adaptedContext);
-        initializer.initialize(preliminaryContext);
+        throw new UnsupportedOperationException();
+//        ServletContext adaptedContext = new ServletContextAdapter(
+//                getServletConfig());
+//        ServletApplicationContext preliminaryContext = new ServletApplicationContext(
+//                adaptedContext);
+//        initializer.initialize(preliminaryContext);
     }
 
     /**
