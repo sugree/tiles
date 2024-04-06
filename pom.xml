@@ -26,14 +26,14 @@
     <parent>
         <artifactId>tiles-master</artifactId>
         <groupId>org.apache.tiles</groupId>
-        <version>7</version>
+        <version>8</version>
         <relativePath>master/master.pom</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.tiles</groupId>
     <artifactId>tiles-parent</artifactId>
-    <version>3.1-SNAPSHOT</version>
+    <version>3.1.0</version>
     <packaging>pom</packaging>
     <name>Tiles 3</name>
     <description>Tiles 3: A framework for page composition.</description>
@@ -54,11 +54,11 @@
         <module>tiles-jsp</module>
 <!--        <module>tiles-freemarker</module>-->
 <!--        <module>tiles-velocity</module>-->
-        <module>tiles-el</module>
+<!--        <module>tiles-el</module>-->
 <!--        <module>tiles-mvel</module>-->
 <!--        <module>tiles-ognl</module>-->
 <!--        <module>tiles-compat</module>-->
-        <module>tiles-extras</module>
+<!--        <module>tiles-extras</module>-->
         <module>assembly</module>
 <!--        <module>tiles-test-pom</module>-->
     </modules>
@@ -280,7 +280,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>2.3.7</version>
+                    <version>4.2.1</version>
                     <inherited>true</inherited>
                 </plugin>
             </plugins>
@@ -341,7 +341,7 @@
         <tiles.osgi.private />
         <tiles.manifestfile>target/osgi/MANIFEST.MF</tiles.manifestfile>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tiles.request.version>1.1-SNAPSHOT</tiles.request.version>
+        <tiles.request.version>1.1.0</tiles.request.version>
         <tiles.autotag.version>1.1.0</tiles.autotag.version>
     </properties>
 
